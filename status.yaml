@@ -1,0 +1,52 @@
+# Status configuration
+
+# Controller status indicator
+output:
+  - platform: ledc
+    id: ${node_name}_controller_status
+    pin: GPIO33
+
+# System status indicator
+light:
+  - platform: status_led
+    name: $node_prefix systemstatus
+    id: ${node_name}_system_status_indicator
+    pin:
+      number: GPIO32
+      inverted: true
+# Controller status indicator
+  - platform: monochromatic
+    name: $node_prefix reglerstatus
+    id: ${node_name}_controller_status_indicator
+    output: ${node_name}_controller_status
+    effects:
+      - pulse:
+          name: auto_mode
+          transition_length: 0.2s
+          update_interval: 0.8s
+      - pulse:
+          name: manual_mode
+          transition_length: 0.2s
+          update_interval: 4s
+
+# Controller operational state indication
+binary_sensor:
+  - platform: template
+    id: ${node_name}_controller_state
+    lambda: |-
+      if ( id(outdoor_temperature).state ) {
+        return true;
+      } else {
+        return false;
+      }
+    on_press:
+      - light.turn_on:
+          id: ${node_name}_controller_status_indicator
+#          effect: auto_mode
+      - delay: 2s
+      - light.turn_off:
+          id: ${node_name}_controller_status_indicator
+#    on_release:
+#      - light.turn_on:
+#          id: ${node_name}_controller_status_indicator
+#          effect: manual_mode

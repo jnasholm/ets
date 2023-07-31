@@ -1,0 +1,16 @@
+# Outdoor temperature sensor configuration
+
+# Input configuration outdoor temperatures
+dallas:
+  - pin: GPIO14
+    id: outdoor_temperature_bus
+    update_interval: 30s
+
+# Outdoor temperature
+sensor:
+  - platform: dallas
+    name: $node_prefix utetemperatur
+    id: outdoor_temperature
+    dallas_id: outdoor_temperature_bus
+    address: 0x2c0000081d200d28
+    resolution: 12

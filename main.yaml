@@ -53,7 +53,7 @@ sensor:
 packages:
   wifi: !include wifi.yaml
 #  ethernet: !include ethernet.yaml
-#  battery: !include battery.yaml
+  battery: !include battery.yaml
   time: !include time.yaml
   status: !include status.yaml
   outdoor_temp: !include sensors-outdoor_temp.yaml

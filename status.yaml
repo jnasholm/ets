@@ -42,11 +42,8 @@ binary_sensor:
     on_press:
       - light.turn_on:
           id: ${node_name}_controller_status_indicator
-#          effect: auto_mode
-      - delay: 2s
-      - light.turn_off:
+          effect: auto_mode
+    on_release:
+      - light.turn_on:
           id: ${node_name}_controller_status_indicator
-#    on_release:
-#      - light.turn_on:
-#          id: ${node_name}_controller_status_indicator
-#          effect: manual_mode
+          effect: manual_mode

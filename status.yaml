@@ -23,11 +23,11 @@ light:
       - pulse:
           name: auto_mode
           transition_length: 0.2s
-          update_interval: 0.8s
+          update_interval: 0.6s
       - pulse:
           name: manual_mode
           transition_length: 0.2s
-          update_interval: 4s
+          update_interval: 2s
 
 # Controller operational state indication
 binary_sensor:

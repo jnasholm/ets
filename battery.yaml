@@ -8,6 +8,10 @@ sensor:
     icon: mdi:battery
     attenuation: auto
     filters:
+      - exponential_moving_average:
+          alpha: 0.06
+          send_every: 3
+          send_first_at: 1
       - multiply: 1.784   # 3.3V/3.7V*2.0, voltage divider (470+470)/470kohm
 
 # Charging voltage sensor
@@ -17,5 +21,9 @@ sensor:
     icon: mdi:lightning-bolt
     attenuation: auto
     filters:
+      - exponential_moving_average:
+          alpha: 0.06
+          send_every: 3
+          send_first_at: 1
       - multiply: 1.468   # 5.0V/5.0V*1.4681, voltage divider (220+470)/470kohm [esp32-devkitlipo]
     #  - multiply: 1.470   # 5.0V/5.0V*1.4700, voltage divider (47+100)/100kohm [esp32-poe-iso]

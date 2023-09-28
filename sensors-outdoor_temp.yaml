@@ -15,3 +15,9 @@ sensor:
     dallas_id: outdoor_temperature_bus
     address: 0x2c0000081d200d28
     resolution: 12
+    filters:
+      - exponential_moving_average:
+          alpha: 0.06
+          send_every: 3
+          send_first_at: 1
+      - heartbeat: 20s

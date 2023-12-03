@@ -9,3 +9,24 @@ Project to create a smart external temperature sensor for private homes. Brief p
 - The controller is an [ESP32](https://www.olimex.com/Products/IoT/ESP32/ESP32-DevKit-LiPo/open-source-hardware) programmed with [ESPHome](https://esphome.io/).
 - The temperature sensor is a digital [DS18B20](https://www.stg-maximintegrated.com/en/products/sensors/DS18B20.html) in an IP65 enclosure from [Energibutiken](https://www.energibutiken.se/sv/dallas-1-wire-givare/24-dallas-1-wire-pro-utegivare-02002.html).
 - Integration with [Home Assistant](https://www.home-assistant.io/) is recommende. Sensor data and configuration parameters can be imported to operate the controller.
+
+> [!TIP]
+> The external temperature sensor is recommended for: [ESP32 SSR Mixing valve actuator controller](https://github.com/jnasholm/mvc-pwm)
+
+## Prototype
+
+![Prototype on experiment board](/images/prototype-experimentboard_1.png)
+<br>
+*Prototype wired on experiment board.*
+
+![Prototype on experiment board](/images/prototype-experimentboard_2.png)
+<br>
+*Prototype wired on experiment board with battery.*
+
+![Prototype in enclosure](/images/prototype-enclosure_1.png)
+<br>
+*Prototype in enclosure with status LEDs and running off the battery.*
+
+![Prototype installed](/images/prototype-installed_1.png)
+<br>
+*Prototype installed in DIN rail connection cabinet and the 5VDC power supply.*

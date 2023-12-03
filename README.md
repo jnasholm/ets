@@ -25,8 +25,8 @@ Project to create a smart external temperature sensor for private homes. Brief p
 
 ![Prototype in enclosure](/images/prototype-enclosure_1.png)
 <br>
-*Prototype in enclosure with status LEDs and running off the battery.*
+*Prototype in enclosure with status LEDs and running on battery power.*
 
 ![Prototype installed](/images/prototype-installed_1.png)
 <br>
-*Prototype installed in DIN rail connection cabinet and the 5VDC power supply.*
+*Prototype installed in DIN rail connection cabinet with a 5V DC power supply.*

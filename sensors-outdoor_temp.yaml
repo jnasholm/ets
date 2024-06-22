@@ -16,6 +16,7 @@ sensor:
     name: $node_prefix utetemperatur
     id: outdoor_temperature
     accuracy_decimals: 2
+#    one_wire_id: outdoor_temperature_bus
     dallas_id: outdoor_temperature_bus
     address: 0x2c0000081d200d28
     resolution: 12

@@ -1,23 +1,19 @@
 # Outdoor temperature sensor configuration
 
 # Input configuration outdoor temperatures
-#one_wire:
-#  - platform: gpio
-#    pin: GPIO14
-dallas:
-  - pin: GPIO14
+one_wire:
+  - platform: gpio
+    pin: GPIO14
     id: outdoor_temperature_bus
-    update_interval: 20s
 
 # Outdoor temperature
 sensor:
-#  - platform: dallas_temp
-  - platform: dallas
+  - platform: dallas_temp
     name: $node_prefix utetemperatur
     id: outdoor_temperature
     accuracy_decimals: 2
-#    one_wire_id: outdoor_temperature_bus
-    dallas_id: outdoor_temperature_bus
+    update_interval: 20s
+    one_wire_id: outdoor_temperature_bus
     address: 0x2c0000081d200d28
     resolution: 12
     filters:

@@ -14,7 +14,7 @@ sensor:
     accuracy_decimals: 2
     update_interval: 20s
     one_wire_id: outdoor_temperature_bus
-    address: 0x2c0000081d200d28
+#    address: 0x2c0000081d200d28
     resolution: 12
     filters:
       - exponential_moving_average:

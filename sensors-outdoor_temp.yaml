@@ -22,3 +22,10 @@ sensor:
           send_every: 3
           send_first_at: 1
       - heartbeat: 20s
+
+# Broadcast outdoor temperature
+udp:
+  update_interval: 10s
+  encryption: !secret broadcast_key
+  sensors:
+    - outdoor_temperature

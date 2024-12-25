@@ -17,6 +17,7 @@ sensor:
 #    address: 0x2c0000081d200d28
     resolution: 12
     filters:
+      - skip_initial: 1
       - exponential_moving_average:
           alpha: 0.06
           send_every: 3

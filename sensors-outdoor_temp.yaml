@@ -3,8 +3,8 @@
 # Input configuration outdoor temperatures
 one_wire:
   - platform: gpio
-    pin: GPIO14
     id: outdoor_temperature_bus
+    pin: $digital_temp_pin
 
 # Outdoor temperature
 sensor:

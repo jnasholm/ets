@@ -9,7 +9,7 @@ one_wire:
 # Outdoor temperature
 sensor:
   - platform: dallas_temp
-    name: $node_prefix utetemperatur
+    name: Utetemperatur
     id: outdoor_temperature
     accuracy_decimals: 2
     update_interval: 20s

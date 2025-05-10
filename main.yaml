@@ -6,7 +6,7 @@
 # Main configuration
 #
 substitutions:
-  node_name: ets1
+  node_name: et
   node_prefix: ET
 
 # Board configuration
@@ -15,7 +15,8 @@ esphome:
     name: "jnasholm.ets"
     version: "0.3"
   name: $node_name
-  friendly_name: Outdoor Temperature Sensor
+  friendly_name: $node_prefix
+  comment: Outdoor Temperature Sensor
   min_version: 2025.4.0
 
 # Flash write interval
@@ -38,14 +39,14 @@ ota:
 # Node switches
 switch:
   - platform: restart
-    name: $node_prefix starta om nod
+    name: Starta om nod
 #  - platform: shutdown
-#    name: $node_prefix stäng av nod
+#    name: Stäng av nod
 
 # Node uptime
 sensor:
   - platform: uptime
-    name: $node_prefix drifttid
+    name: Drifttid
     icon: mdi:timer-outline
     update_interval: 60s
 

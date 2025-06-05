@@ -24,9 +24,13 @@ sensor:
           send_first_at: 1
       - heartbeat: 20s
 
-# Broadcast outdoor temperature
+# Packet transport configuration
 udp:
-  update_interval: 10s
-  encryption: !secret broadcast_key
-  sensors:
-    - outdoor_temperature
+
+# Broadcast outdoor temperature
+packet_transport:
+  - platform: udp
+    update_interval: 10s
+    encryption: !secret broadcast_key
+    sensors:
+      - outdoor_temperature

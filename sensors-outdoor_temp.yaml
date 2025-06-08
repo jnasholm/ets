@@ -30,6 +30,7 @@ udp:
 # Broadcast outdoor temperature
 packet_transport:
   - platform: udp
+    id: transport_output
     update_interval: 10s
     encryption: !secret broadcast_key
     sensors:

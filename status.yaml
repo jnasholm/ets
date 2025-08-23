@@ -34,7 +34,7 @@ binary_sensor:
   - platform: template
     id: ${node_name}_controller_state
     lambda: |-
-      if ( id(outdoor_temperature).state ) {
+      if ( !isnan(id(outdoor_temperature).state) ) {
         return true;
       } else {
         return false;

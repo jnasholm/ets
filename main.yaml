@@ -9,7 +9,7 @@ substitutions:
   node_name: et
   node_prefix: ET
 
-# Board configuration
+# Project configuration
 esphome:
   project:
     name: "jnasholm.ets"
